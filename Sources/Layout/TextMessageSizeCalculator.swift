@@ -48,7 +48,7 @@ open class TextMessageSizeCalculator: MessageSizeCalculator {
       fatalError("messageContainerSize received unhandled MessageDataType: \(message.kind)")
     }
       
-      if message.messageId = "-1" {
+      if message.messageId == "-1" {
           outgoingMessageLabelInsets = UIEdgeInsets(top: 7, left: 14, bottom: 7, right: 18)
           messageContainerSize = labelSize(for: attributedText, considering: maxWidth)
       } else {
